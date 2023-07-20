@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Dashboard from "./Dashboard";
 
 const DeleteBlog = () => {
   const [data, setData] = useState([{}]);
@@ -38,6 +39,7 @@ const DeleteBlog = () => {
 
   return (
     <div>
+      <Dashboard/>
       <div className="financialss ">
         {data.map((item, index) => (
           <div key={index} className="financess" data-aos="fade-right">

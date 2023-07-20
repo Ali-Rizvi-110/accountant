@@ -13,6 +13,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import AddBlog from "./admin/AddBlog";
 import Blog from "./components/Blog";
 import DeleteBlog from "./admin/DeleteBlog";
+import ChangePass from "./admin/ChangePass";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/addBlog" element={<AddBlog />} />
             <Route path="/admin/deleteBlog" element={<DeleteBlog />} />
+            <Route path="/admin/changePass" element={<ChangePass />} />
           </Route>
         </Routes>
       </BrowserRouter>

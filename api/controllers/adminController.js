@@ -23,6 +23,23 @@ const login = async (req, res) => {
     }
 }
 
+const changePassword = async (req, res) => {
+    try {
+        const password = req.body.password;
+        const admin = await Admin.findOne({});
+        if(!admin){
+            return res.status(404).json("Admin not found");
+        }
+        admin.password = password;
+        await admin.save();
+        res.status(200).json("password changed successfully");
+    } catch (error) {
+        console.log(error);
+        res.status(400).json(error);
+    }
+}
+
 module.exports = {
     login,
+    changePassword,
 }

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Dashboard from "./Dashboard";
 
 const AddBlog = () => {
   const [data, setData] = useState({
@@ -37,7 +38,8 @@ const AddBlog = () => {
 
   return (
     <>
-      <div className="">
+      <Dashboard/>
+      <div className="" style={{position: "absolute", left: "22vw", top:"25vh"}}>
         <h1 className="text-center mt-3 fs-1 text-primary">
           <u>Create Blogs</u>
         </h1>
